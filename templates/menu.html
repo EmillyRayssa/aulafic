@@ -13,10 +13,12 @@
       <a href="{% url 'contato' %}">Contato</a>
       <a href="">Transparência</a>
       <div class="nav-divider"></div>
-      <a href="login.html" class="btn-nav btn-login">Login</a>
-      <a href="cadastro.html" class="btn-nav btn-cadastro">Cadastro</a>
-      <a href="perfil.html" class="btn-nav btn-perfil">Perfil</a>
-      <a href="#" class="btn-nav btn-sair">Sair</a>
+      {% if not user.is_authenticated %}
+      <a href="{% url 'login' %}" class="btn-nav btn-login">Login</a>
+      <a href="{% url 'cadastro' %}" class="btn-nav btn-cadastro">Cadastro</a>
+      {% else %}
+      <a href="{% url 'sair' %}" class="btn-nav btn-login">Sair</a>
+      {% endif %}
     </div>
   </div>
 </nav>

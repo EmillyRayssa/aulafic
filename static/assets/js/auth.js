@@ -1,4 +1,6 @@
 const form = document.getElementById('auth-form');
+
+/*
 if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -8,7 +10,7 @@ if (form) {
       setTimeout(() => successMsg.classList.remove('show'), 5000);
     }
   });
-}
+}*/
 
 // CPF mask
 const cpfInput = document.getElementById('cpf');
